@@ -183,12 +183,7 @@ table.deck-table tr:last-child td{border-bottom:none;}
 
 /* ---- mvp cards ---- */
 .mvp-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
-/* ---- system-gap layout + illustration (page 3) ---- */
-.sys-layout{display:grid; grid-template-columns:0.92fr 1.08fr; gap:40px; align-items:center; margin-top:6px;}
-.sys-illus{display:flex; align-items:center; justify-content:center;}
-.sys-svg{width:100%; max-width:430px; height:auto;}
-.sys-cards{display:flex; flex-direction:column; gap:16px;}
-@media (max-width:880px){ .sys-layout{grid-template-columns:1fr; gap:22px;} .sys-svg{max-width:380px;} }
+
 .mvp-card{background:var(--card); border:1px solid var(--card-line); border-radius:12px; padding:20px;}
 .mvp-card h4{color:var(--accent); font-size:24px; margin-bottom:10px;}
 .mvp-card p{color:var(--ink-2); font-size:20px; line-height:1.65;}
@@ -335,11 +330,10 @@ table.deck-table tr:last-child td{border-bottom:none;}
   </div>
 </section>
 
-<section class="slide" data-section="引起動機" data-slide="3">
-  <div class="slide-inner">
+<section class="slide" data-section="引起動機" data-slide="3" style="background:url('s3-card.png') center/cover no-repeat, var(--bg);">
+  <div class="slide-inner" style="background:rgba(236,236,234,0.70); backdrop-filter:blur(2px); border-radius:16px; padding:8px 24px; position:absolute; top:44px; left:30px;">
     <div class="kicker">WHY · 既有系統限制</div>
-    <h2 class="h">既有系統能監控，卻無法管理</h2>
-    <div class="sys-illus"><img src="s3-card.png" alt="既有系統能監控卻無法管理" style="width:100%; height:auto; border-radius:12px; box-shadow:0 2px 20px rgba(24,24,27,0.12);"></div>
+    <h2 class="h" style="font-size:34px;">既有系統能監控，卻無法管理</h2>
   </div>
 </section>
 
