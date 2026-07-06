@@ -185,7 +185,7 @@ table.deck-table tr:last-child td{border-bottom:none;}
 .mvp-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
 /* ---- system-gap layout + illustration (page 3) ---- */
 .sys-layout{display:grid; grid-template-columns:0.92fr 1.08fr; gap:40px; align-items:center; margin-top:6px;}
-.sys-illus{aspect-ratio:3/2; background:url('s3-illus.png') center/cover no-repeat; -webkit-mask:url('s3-illus.png') center/cover no-repeat; mask:url('s3-illus.png') center/cover no-repeat; -webkit-mask-mode:luminance; mask-mode:luminance; border-radius:12px; box-shadow:0 2px 20px rgba(24,24,27,0.12);}
+.sys-illus{display:flex; align-items:center; justify-content:center;}
 .sys-svg{width:100%; max-width:430px; height:auto;}
 .sys-cards{display:flex; flex-direction:column; gap:16px;}
 @media (max-width:880px){ .sys-layout{grid-template-columns:1fr; gap:22px;} .sys-svg{max-width:380px;} }
@@ -339,13 +339,7 @@ table.deck-table tr:last-child td{border-bottom:none;}
   <div class="slide-inner">
     <div class="kicker">WHY · 既有系統限制</div>
     <h2 class="h">既有系統能監控，卻無法管理</h2>
-    <div class="sys-layout">
-      <div class="sys-illus"></div>
-      <div class="sys-cards">
-        <div class="mvp-card"><h4>現有 BMS 的功能邊界</h4><p>已整合機電環控子系統，但僅止於監視、蒐集與警報。</p></div>
-        <div class="mvp-card"><h4>應用層的缺口</h4><p>缺乏設備履歷、巡檢排程、報修派工與生命週期管理，管理層無法整體性決策。</p></div>
-      </div>
-    </div>
+    <div class="sys-illus"><img src="s3-card.png" alt="既有系統能監控卻無法管理" style="width:100%; height:auto; border-radius:12px; box-shadow:0 2px 20px rgba(24,24,27,0.12);"></div>
   </div>
 </section>
 
