@@ -688,13 +688,32 @@ table.deck-table tr:last-child td{border-bottom:none;}
     <svg viewBox="0 0 1000 640" preserveAspectRatio="xMidYMid slice">
       <defs>
         <radialGradient id="glowThx" cx="50%" cy="40%" r="58%">
-          <stop offset="0%" stop-color="#6a4cf0" stop-opacity="0.20"/>
+          <stop offset="0%" stop-color="#6a4cf0" stop-opacity="0.25"/>
           <stop offset="100%" stop-color="#6a4cf0" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glowThx2" cx="60%" cy="60%" r="40%">
+          <stop offset="0%" stop-color="#e0117d" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#e0117d" stop-opacity="0"/>
         </radialGradient>
       </defs>
       <rect x="0" y="0" width="1000" height="640" fill="url(#glowThx)"/>
-      <g class="ring" fill="none" stroke="#e0117d" stroke-opacity="0.18" stroke-width="2">
-        <circle cx="500" cy="300" r="150"/>
+      <rect x="0" y="0" width="1000" height="640" fill="url(#glowThx2)"/>
+      <g class="ring" fill="none" stroke="#6a4cf0" stroke-opacity="0.12" stroke-width="2">
+        <circle cx="500" cy="300" r="150" style="animation-delay:0s"/>
+      </g>
+      <g class="ring" fill="none" stroke="#e0117d" stroke-opacity="0.08" stroke-width="1.5">
+        <circle cx="500" cy="300" r="200" style="animation-delay:1s"/>
+      </g>
+      <g class="ring" fill="none" stroke="#f1610c" stroke-opacity="0.06" stroke-width="1">
+        <circle cx="500" cy="300" r="260" style="animation-delay:2s"/>
+      </g>
+      <g fill="#6a4cf0" opacity="0.5">
+        <circle class="node" cx="300" cy="150" r="3" style="animation-delay:0s"/>
+        <circle class="node" cx="700" cy="180" r="4" fill="#e0117d" style="animation-delay:0.8s"/>
+        <circle class="node" cx="250" cy="450" r="3" fill="#f1610c" style="animation-delay:1.6s"/>
+        <circle class="node" cx="750" cy="480" r="4" fill="#6a4cf0" style="animation-delay:2.4s"/>
+        <circle class="node" cx="850" cy="300" r="3" fill="#e0117d" style="animation-delay:3.2s"/>
+        <circle class="node" cx="150" cy="280" r="3" style="animation-delay:4s"/>
       </g>
     </svg>
   </div>
@@ -702,7 +721,7 @@ table.deck-table tr:last-child td{border-bottom:none;}
     <div class="kicker" style="letter-spacing:.32em;">THANK YOU</div>
     <h1 class="thanks-title">感謝聆聽</h1>
     <div class="thanks-sub">敬請指教</div>
-    <div class="thanks-org mono">臺北農產運銷股份有限公司　·　第一果菜批發市場</div>
+    <div class="thanks-org mono">臺北農產運銷股份有限公司　·　管理部/總務課</div>
   </div>
 </section>
 
