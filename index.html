@@ -149,7 +149,7 @@ table.deck-table tr:last-child td{border-bottom:none;}
 
 /* ---- modules grid ---- */
 .mod-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
-.mod-card{background:var(--card); border:1px solid var(--card-line); border-top:2px solid var(--accent); border-radius:12px; padding:24px 20px; font-size:20px;}
+.mod-card{background:var(--card); border:1px solid var(--card-line); border-top:2px solid var(--accent); border-radius:12px; padding:24px 20px 18px; font-size:20px; display:flex; flex-direction:column; align-items:center;}
 .mod-card:nth-child(4n+2){border-top-color:var(--accent-2);}
 .mod-card:nth-child(4n+3){border-top-color:var(--warn);}
 .mod-card:nth-child(4n+4){border-top-color:var(--good);}
@@ -416,14 +416,14 @@ table.deck-table tr:last-child td{border-bottom:none;}
     <div class="kicker">SYSTEM · 系統架構</div>
     <h2 class="h" style="margin-bottom:20px;">八大核心功能模組：建築生命週期與設施管理生態系</h2>
     <div class="mod-grid">
-      <div class="mod-card"><div class="mnum">01</div><h4>📋 設備資產管理</h4></div>
-      <div class="mod-card"><div class="mnum">02</div><h4>🔍 智慧巡檢管理</h4></div>
-      <div class="mod-card"><div class="mnum">03</div><h4>🔧 報修派工管理</h4></div>
-      <div class="mod-card"><div class="mnum">04</div><h4>🖥️ 中央監控整合(BMS)</h4></div>
-      <div class="mod-card"><div class="mnum">05</div><h4>⚡ 能源管理</h4></div>
-      <div class="mod-card"><div class="mnum">06</div><h4>🏗️ 3D BIM 管理</h4></div>
-      <div class="mod-card"><div class="mnum">07</div><h4>📊 中央戰情室 Dashboard</h4></div>
-      <div class="mod-card"><div class="mnum">08</div><h4>🤖 AI 智慧分析</h4></div>
+      <div class="mod-card" style="text-align:center;"><div class="mnum">01</div><img src="icons/icon-asset.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px rgba(106,76,240,0.5));"><h4>設備資產管理</h4></div>
+      <div class="mod-card" style="text-align:center;"><div class="mnum">02</div><img src="icons/icon-inspection.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px rgba(106,76,240,0.5));"><h4>智慧巡檢管理</h4></div>
+      <div class="mod-card" style="text-align:center;"><div class="mnum">03</div><img src="icons/icon-repair.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px rgba(106,76,240,0.5));"><h4>報修派工管理</h4></div>
+      <div class="mod-card" style="text-align:center;"><div class="mnum">04</div><img src="icons/icon-bms.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px rgba(106,76,240,0.5));"><h4>中央監控整合(BMS)</h4></div>
+      <div class="mod-card" style="text-align:center;"><div class="mnum">05</div><img src="icons/icon-energy.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px rgba(224,17,125,0.5));"><h4>能源管理</h4></div>
+      <div class="mod-card" style="text-align:center;"><div class="mnum">06</div><img src="icons/icon-bim.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px rgba(224,17,125,0.5));"><h4>3D BIM 管理</h4></div>
+      <div class="mod-card" style="text-align:center;"><div class="mnum">07</div><img src="icons/icon-dashboard.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px rgba(241,97,12,0.5));"><h4>中央戰情室 Dashboard</h4></div>
+      <div class="mod-card" style="text-align:center;"><div class="mnum">08</div><img src="icons/icon-ai.png" style="width:48px;height:48px;display:block;margin:0 auto 6px;filter:drop-shadow(0 0 6px rgba(241,97,12,0.5));"><h4>AI 智慧分析</h4></div>
     </div>
   </div>
 </section>
