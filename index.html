@@ -335,14 +335,13 @@ table.deck-table tr:last-child td{border-bottom:none;}
   </div>
 </section>
 
-<section class="slide" data-section="引起動機" data-slide="3">
-  <div class="slide-inner">
+<section class="slide" data-section="引起動機" data-slide="3" style="background:url('bg-sysgap.png') center/cover no-repeat, var(--bg); background-blend-mode:overlay;">
+  <div class="slide-inner" style="background:rgba(236,236,234,0.88); border-radius:16px; padding:24px 30px;">
     <div class="kicker">WHY · 既有系統限制</div>
     <h2 class="h">既有系統能監控，卻無法管理</h2>
     <div class="sys-layout">
       <div class="sys-illus"><svg class="sys-svg" viewBox="0 0 460 300" role="img" aria-label="既有系統能監控卻無法管理示意圖">
           <circle cx="230" cy="150" r="150" fill="var(--accent)" opacity="0.06"/>
-          <!-- LEFT: monitoring (active) -->
           <g transform="translate(24 60)">
             <rect x="0" y="0" width="150" height="112" rx="12" fill="var(--card)" stroke="var(--accent)" stroke-width="3"/>
             <path d="M16 74 L36 74 L46 48 L60 92 L74 62 L86 74 L134 74" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -354,14 +353,12 @@ table.deck-table tr:last-child td{border-bottom:none;}
             <text x="75" y="140" text-anchor="middle" font-size="18" font-weight="800" fill="var(--ink)">監控</text>
             <text x="75" y="162" text-anchor="middle" font-size="12.5" fill="var(--ink-3)">監視 · 蒐集 · 警報</text>
           </g>
-          <!-- CENTER: arrow into the gap -->
           <g transform="translate(190 96)">
             <path d="M0 24 H44" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
             <path d="M36 14 L50 24 L36 34" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             <line x1="62" y1="-4" x2="62" y2="52" stroke="var(--accent-2)" stroke-width="3" stroke-dasharray="6 7"/>
             <text x="62" y="82" text-anchor="middle" font-size="22" font-weight="900" fill="var(--accent-2)">&#10005;</text>
           </g>
-          <!-- RIGHT: management (missing) -->
           <g transform="translate(286 60)">
             <rect x="0" y="0" width="150" height="112" rx="12" fill="none" stroke="var(--ink-4)" stroke-width="3" stroke-dasharray="8 8" opacity="0.7"/>
             <g transform="translate(40 30)" opacity="0.42">
