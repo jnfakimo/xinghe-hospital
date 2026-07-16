@@ -643,6 +643,42 @@ table.deck-table tr:last-child td{border-bottom:none;}
 </section>
 
 <section class="slide" id="s15" data-section="喚起行動" data-slide="16">
+  <div class="deco" aria-hidden="true">
+    <svg viewBox="0 0 1000 640" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="sweepGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#6a4cf0" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#6a4cf0" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glowSec" cx="86%" cy="18%" r="40%">
+          <stop offset="0%" stop-color="#6a4cf0" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#6a4cf0" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1000" height="640" fill="url(#glowSec)"/>
+      <g fill="none" stroke="#6a4cf0" stroke-opacity="0.16" stroke-width="1.5">
+        <circle cx="860" cy="150" r="48"/>
+        <circle cx="860" cy="150" r="90"/>
+        <circle cx="860" cy="150" r="132"/>
+      </g>
+      <line x1="728" y1="150" x2="992" y2="150" stroke="#6a4cf0" stroke-opacity="0.12"/>
+      <line x1="860" y1="18" x2="860" y2="282" stroke="#6a4cf0" stroke-opacity="0.12"/>
+      <g style="transform-origin:860px 150px; animation:spinSlow 3.4s linear infinite;">
+        <path d="M860,150 L838,22 A132,132 0 0,1 908,29 Z" fill="url(#sweepGrad)"/>
+      </g>
+      <circle cx="860" cy="150" r="4" fill="#e0117d"/>
+      <g class="stream" stroke="#6a4cf0" stroke-width="2" opacity="0.35">
+        <path d="M40 560 H360" style="animation-delay:0s"/>
+      </g>
+      <g>
+        <circle class="node" cx="120" cy="470" r="4" fill="#2f9e6f" opacity="0.75" style="animation-delay:0s"/>
+        <circle class="node" cx="230" cy="520" r="3" fill="#e0117d" opacity="0.7" style="animation-delay:0.9s"/>
+        <circle class="node" cx="90" cy="560" r="3" fill="#6a4cf0" opacity="0.7" style="animation-delay:1.6s"/>
+        <circle class="node" cx="300" cy="480" r="3" fill="#2f9e6f" opacity="0.7" style="animation-delay:2.3s"/>
+        <circle class="node" cx="180" cy="440" r="3" fill="#6a4cf0" opacity="0.6" style="animation-delay:3s"/>
+      </g>
+    </svg>
+  </div>
   <div class="slide-inner">
     <div class="kicker">SECURITY · 安全巡邏實測</div>
     <h2 class="h">駐衛警巡檢系統</h2>
