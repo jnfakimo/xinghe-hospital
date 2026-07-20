@@ -146,6 +146,20 @@ table.deck-table th, table.deck-table td{padding:14px 18px; text-align:left; bor
 table.deck-table thead th{color:var(--ink-3); font-size:18px; letter-spacing:.06em; font-weight:700; font-family:"JetBrains Mono",ui-monospace,monospace;}
 table.deck-table td.k{color:var(--ink-2); font-weight:700; white-space:normal;}
 table.deck-table tr:last-child td{border-bottom:none;}
+.compare-wrap{overflow:hidden; border:1px solid var(--card-line); border-radius:14px; background:rgba(255,255,255,.76); box-shadow:0 12px 30px rgba(24,24,27,.07);}
+table.compare-table{table-layout:fixed; font-size:15px; line-height:1.38;}
+table.compare-table col:first-child{width:18%;}
+table.compare-table col:nth-child(2){width:38%;}
+table.compare-table col:nth-child(3){width:44%;}
+table.compare-table th, table.compare-table td{padding:7px 14px; white-space:normal; vertical-align:middle;}
+table.compare-table thead th{padding-top:10px; padding-bottom:10px; font-size:14px; background:rgba(24,24,27,.035);}
+table.compare-table thead th:last-child{background:rgba(47,158,111,.09); color:var(--good);}
+table.compare-table tbody td:last-child{background:rgba(47,158,111,.045);}
+table.compare-table td.k{font-size:14px; color:var(--ink);}
+.compare-main{display:block; color:var(--ink-2); font-weight:600;}
+.compare-note{display:block; margin-top:1px; color:var(--ink-3); font-size:13px;}
+.compare-table td:last-child .compare-main{color:#247b58;}
+.saving{display:inline-block; margin-left:6px; padding:1px 7px; border-radius:999px; background:rgba(47,158,111,.12); color:#247b58; font-size:12px; font-weight:800; white-space:nowrap;}
 .pill{display:inline-block; padding:3px 12px; border-radius:999px; font-size:17px; font-family:"JetBrains Mono",ui-monospace,monospace;}
 .pill.zero{background:rgba(0,224,164,0.14); color:var(--good); border:1px solid rgba(0,224,164,0.35);}
 
@@ -556,15 +570,19 @@ table.deck-table tr:last-child td{border-bottom:none;}
   <div class="slide-inner" style="background:rgba(236,236,234,0.88); border-radius:16px; padding:24px 30px;">
     <div class="kicker">COMPARE · 成本效益</div>
     <h2 class="h">委外商用系統　vs　自研開源系統</h2>
-    <div class="tbl-wrap">
-      <table class="deck-table">
+    <div class="tbl-wrap compare-wrap">
+      <table class="deck-table compare-table">
+        <colgroup><col><col><col></colgroup>
         <thead><tr><th>比較項目</th><th>委外商用系統</th><th style="color:var(--accent);">自研開源系統</th></tr></thead>
         <tbody>
-          <tr><td class="k">建置費用</td><td>約 300–800 萬元以上</td><td style="color:var(--good);">約 30–50 萬元（省 80%+）</td></tr>
-          <tr><td class="k">年度授權／維護費</td><td>約 50–150 萬元／年</td><td style="color:var(--good);">約 10 萬元／年（省 85%+）</td></tr>
-          <tr><td class="k">客製化彈性</td><td>受限廠商合約與報價</td><td style="color:var(--good);">內部主導，隨需求即時調整</td></tr>
-          <tr><td class="k">技術自主權</td><td>原始碼掌握於廠商</td><td style="color:var(--good);">原始碼完全自有</td></tr>
-          <tr><td class="k">擴充至其他場域</td><td>需另行付費委製</td><td style="color:var(--good);">零邊際成本複製擴展</td></tr>
+          <tr><td class="k">建置費用</td><td><span class="compare-main">約 300–800 萬元以上</span></td><td><span class="compare-main">約 30–50 萬元 <span class="saving">節省 80%+</span></span></td></tr>
+          <tr><td class="k">年度授權／維護費</td><td><span class="compare-main">約 50–150 萬元／年</span></td><td><span class="compare-main">約 10 萬元／年 <span class="saving">節省 80%–90%</span></span></td></tr>
+          <tr><td class="k">客製化彈性</td><td><span class="compare-main">受限於廠商合約</span><span class="compare-note">排程與追加需求皆需另行報價</span></td><td><span class="compare-main">由內部主導</span><span class="compare-note">可依實際需求即時調整</span></td></tr>
+          <tr><td class="k">技術自主權</td><td><span class="compare-main">原始碼與核心技術掌握於廠商</span></td><td><span class="compare-main">原始碼、資料庫及系統架構完全自有</span></td></tr>
+          <tr><td class="k">系統擴充能力</td><td><span class="compare-main">新增功能或設備介接需另行報價</span></td><td><span class="compare-main">可自主整合 LINE、設備監控及第三方系統</span></td></tr>
+          <tr><td class="k">LINE 推播費用</td><td><span class="compare-main">高用量方案約 1,200 元／月</span><span class="compare-note">另可能收取串接及維護費</span></td><td><span class="compare-main">高用量方案約 1,200 元／月</span><span class="compare-note">無額外廠商介接費</span></td></tr>
+          <tr><td class="k">廠商依賴程度</td><td><span class="compare-main">高</span><span class="compare-note">維護及功能調整仰賴原廠</span></td><td><span class="compare-main">低</span><span class="compare-note">可自行維護或彈性更換技術團隊</span></td></tr>
+          <tr><td class="k">長期效益</td><td><span class="compare-main">初期導入快速</span><span class="compare-note">長期成本較高</span></td><td><span class="compare-main">建置成本低、擴充彈性高</span><span class="compare-note">具持續累積的長期效益</span></td></tr>
         </tbody>
       </table>
     </div>
