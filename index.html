@@ -377,7 +377,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
         <img src="central-command-illustration.jpg" alt="中央戰情室：整合既有系統，即時掌握設備、告警與運維數據" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:14px;">
       </div>
     </div>
-    <div class="value-line"><div>集中看見</div><div>即時發現</div><div>閉環處理</div><div>累積決策資料</div></div>
+    <div class="value-line"><div>集中看見</div><div>即時發現</div><div>立即處理</div><div>累積決策資料</div></div>
     <div class="exec-bottomline">從「只能知道設備異常」，提升為「即時發現、立即處理、持續追蹤、形成決策資料」。</div>
   </div>
 </section>
@@ -484,7 +484,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
     <div style="display:flex; align-items:center; justify-content:center; margin:10px 0;">
       <img src="P5.png" alt="" style="width:75%; height:auto; border-radius:12px; box-shadow:0 2px 20px rgba(24,24,27,0.10);">
     </div>
-    <p class="lede" style="margin-top:24px; font-size:18px;">戰略優勢在於「避免供應商鎖定」——自研系統使開發團隊掌握原始碼主導權，能完全貼合臺北農產公司 SOP。</p>
+    <p class="lede" style="margin-top:24px; font-size:18px; max-width:none; white-space:nowrap;">戰略優勢在於「避免供應商鎖定」——自研系統使開發團隊掌握原始碼主導權，能完全貼合臺北農產公司 SOP。</p>
   </div>
 </section>
 
@@ -502,6 +502,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
       <div class="s6-center">
         <img src="brain-center.png" alt="智慧維運大腦">
         <div class="brain-label">智慧維運大腦</div>
+        <img src="smart-building-digital-twin.png" alt="智慧建築數位孿生示意" style="max-width:102%; max-height:48vh; width:auto; height:auto; display:block; margin:14px auto 0;">
       </div>
       <div class="s6-col">
         <div class="s6-card"><div class="mnum">05</div><img src="icons/bim-v6.png" style="filter:drop-shadow(0 0 6px rgba(241,97,12,0.5));"><div class="s6-txt"><h4>3D BIM 管理</h4><div class="cdesc">整合三維模型，奠定數位雙生基礎</div></div></div>
@@ -944,7 +945,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
     var availW = s.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
     var natH = inner.scrollHeight, natW = inner.scrollWidth;
     var scale = Math.min(1, availH / natH, availW / natW);
-    inner.style.transform = scale < 0.999 ? ('scale(' + (scale * 0.985) + ')') : 'none';
+    inner.style.transform = scale < 0.999 ? ('scale(' + (scale * 0.97) + ')') : 'none';
   }
 
   function render(){
@@ -954,6 +955,13 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
     document.getElementById('section-tag').textContent = '— ' + slides[current].dataset.section + ' —';
     fitActive();
     setTimeout(fitActive, 60);
+    setTimeout(fitActive, 300);
+    var inner = slides[current].querySelector('.slide-inner');
+    if(inner){
+      inner.querySelectorAll('img').forEach(function(img){
+        if(!img.complete){ img.addEventListener('load', fitActive, {once:true}); }
+      });
+    }
   }
   var _rt; window.addEventListener('resize', function(){ clearTimeout(_rt); _rt = setTimeout(fitActive, 120); });
   window.addEventListener('load', fitActive);
