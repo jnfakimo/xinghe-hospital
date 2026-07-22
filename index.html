@@ -294,6 +294,8 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
 .slide img{cursor:zoom-in;}
 .img-zoom-overlay{position:fixed; inset:0; z-index:100; display:flex; align-items:center; justify-content:center; background:rgba(10,10,12,0.86); cursor:zoom-out; animation:fadeIn .18s ease;}
 .img-zoom-overlay img{max-width:92vw; max-height:92vh; width:auto; height:auto; border-radius:10px; box-shadow:0 24px 70px rgba(0,0,0,0.55); cursor:zoom-out;}
+.img-zoom-overlay.zoom-big{overflow:auto; align-items:flex-start; justify-content:center;}
+.img-zoom-overlay.zoom-big img{max-width:none; max-height:none;}
 @keyframes fadeIn{from{opacity:0;} to{opacity:1;}}
 @media (prefers-reduced-motion: reduce){ .img-zoom-overlay{animation:none;} }
 </style>
@@ -301,9 +303,8 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
 <body>
 
 <div id="progress"></div>
-<div class="brand-logo" style="font-family:'Noto Sans TC', sans-serif; display:flex; flex-direction:column; align-items:flex-end; justify-content:center;">
-  <span style="font-size:20px; font-weight:900; color:var(--ink); line-height:1.1; letter-spacing:2px;">臺北農產公司</span>
-  <span style="font-size:9px; font-weight:700; color:var(--ink-3); letter-spacing:1px; font-family:'JetBrains Mono', monospace; margin-top:2px;">TAPMC</span>
+<div class="brand-logo" style="display:flex; align-items:center; justify-content:flex-end;">
+  <img src="logo-title.png" alt="臺北農產公司" style="height:100%; width:auto; object-fit:contain;">
 </div>
 <div id="section-tag">— 引起動機 —</div>
 <div id="pageInfo"><b>1</b> / 13</div>
@@ -342,8 +343,8 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
     <h2 class="exec-title">現有系統可以<span class="accent">看見設備</span>，<br>但還無法支援跨系統管理與即時決策</h2>
     <div class="gap-layout">
       <div>
-        <img src="legacy-systems.png" alt="各自獨立運作的監控系統" style="width:100%; height:auto;">
-        <div class="scope-note">現有原廠交付範圍以設備監視、告警及資料收集為主。</div>
+        <img src="legacy-systems.png" alt="各自獨立運作的監控系統" data-zoom-big="1" style="width:100%; height:auto;">
+        <div class="scope-note">中工交付中央監控系統、告警、資料收集及功能操作為主。</div>
       </div>
       <div class="gap-divider"><span>≠</span></div>
       <div>
@@ -356,14 +357,14 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
         </div>
       </div>
     </div>
-    <div class="exec-bottomline">缺的不是另一套單一監控系統，而是能整合既有系統、管理流程與歷史資料的中央管理平台。</div>
+    <div class="exec-bottomline">缺的不是系統，而是一套整合既有系統、管理流程與設備歷史資料的中央管理平台。</div>
   </div>
 </section>
 
 <section class="slide" id="exec-integration" data-section="決策摘要" data-slide="3">
   <div class="slide-inner">
     <div class="kicker">TARGET · 整合藍圖</div>
-    <h2 class="exec-title">整合既有系統，建立<span class="accent">臺北農產自己的中央戰情管理平台</span></h2>
+    <h2 class="exec-title">整合既有系統，建構<span class="accent">臺北農產專屬中央戰情管理平台</span></h2>
     <div class="integration-map">
       <div class="source-cloud">
         <div class="source-node">中央監控 BMS</div><div class="source-node">消防系統</div>
@@ -372,14 +373,8 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
         <div class="source-node">巡檢／報修</div><div class="source-node">IoT 感測</div>
       </div>
       <div class="flow-arrow-big" aria-hidden="true"></div>
-      <div class="warroom">
-        <div class="eyebrow">TAIPEI AGRICULTURAL PRODUCTS</div>
-        <h3>智慧巡檢管理暨<br>中央戰情室平台</h3>
-        <div class="cap-list">
-          <span>即時戰情總覽</span><span>未巡／異常推播</span>
-          <span>報修工單閉環</span><span>設備完整履歷</span>
-          <span>故障趨勢、維修成本與生命週期分析</span>
-        </div>
+      <div class="warroom" style="padding:0; overflow:hidden;">
+        <img src="central-command-illustration.jpg" alt="中央戰情室：整合既有系統，即時掌握設備、告警與運維數據" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:14px;">
       </div>
     </div>
     <div class="value-line"><div>集中看見</div><div>即時發現</div><div>閉環處理</div><div>累積決策資料</div></div>
@@ -390,7 +385,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
 <section class="slide" id="exec-decision" data-section="決策摘要" data-slide="4">
   <div class="slide-inner">
     <div class="kicker">DECISION · 建議方案</div>
-    <h2 class="exec-title">採分階段自主整合，<br>並成立<span class="accent">跨部門專案小組</span></h2>
+    <h2 class="exec-title">採分階段整合推動，<br>成立<span class="accent">跨部門專案小組</span></h2>
     <div class="decision-layout">
       <div>
         <div class="cost-contrast">
@@ -401,7 +396,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
       </div>
       <div class="team-block">
         <h3>建議成立「智慧巡檢暨中央戰情室專案小組」</h3>
-        <div style="font-size:14px;color:var(--ink-2);line-height:1.5;">由高階主管督導、PM 統籌，納入資訊、基電、工務、設備管理及第一線種子人員。</div>
+        <div style="font-size:14px;color:var(--ink-2);line-height:1.5;">指派專案負責人（PM），納入資訊、機電、一市場及第一線種子人員。</div>
         <div class="team-members"><span>高階主管</span><span>專案經理 PM</span><span>資訊</span><span>基電／工務</span><span>使用單位</span><span>種子人員</span></div>
         <div class="team-roadmap">
           <div><strong>農一期</strong><br>核心功能驗證與上線</div>
@@ -410,7 +405,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
         </div>
       </div>
     </div>
-    <div class="decision-ask">建議決策：同意成立專案小組，採分階段方式推動自主整合建置</div>
+    <div class="decision-ask">成立跨部門專案小組，分階段推動自主整合，建構臺北農產中央戰情管理平台。</div>
   </div>
 </section>
 
@@ -972,12 +967,16 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
   function closeZoom(){
     if(zoomOverlay){ zoomOverlay.remove(); zoomOverlay = null; }
   }
-  function openZoom(src, alt){
+  function openZoom(src, alt, big){
     closeZoom();
     zoomOverlay = document.createElement('div');
-    zoomOverlay.className = 'img-zoom-overlay';
+    zoomOverlay.className = 'img-zoom-overlay' + (big ? ' zoom-big' : '');
     var img = document.createElement('img');
-    img.src = src; img.alt = alt || '';
+    img.alt = alt || '';
+    if(big){
+      img.onload = function(){ img.style.width = (img.naturalWidth*2) + 'px'; img.style.height = 'auto'; };
+    }
+    img.src = src;
     zoomOverlay.appendChild(img);
     zoomOverlay.addEventListener('click', closeZoom);
     document.body.appendChild(zoomOverlay);
@@ -986,7 +985,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
     img.addEventListener('click', function(e){
       e.stopPropagation();
       if(zoomOverlay){ closeZoom(); return; }
-      openZoom(img.getAttribute('src'), img.getAttribute('alt'));
+      openZoom(img.getAttribute('src'), img.getAttribute('alt'), img.hasAttribute('data-zoom-big'));
     });
   });
 
