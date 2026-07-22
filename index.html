@@ -191,7 +191,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
 /* ---- left-right modules layout ---- */
 .s6-split{display:grid; grid-template-columns:1fr 1.1fr 1fr; gap:12px; align-items:center;}
 .s6-col{display:flex; flex-direction:column; gap:8px;}
-.s6-card{background:var(--card); border:1px solid var(--card-line); border-radius:10px; padding:12px 14px; display:flex; align-items:center; gap:10px; transition:transform .2s, box-shadow .2s; box-shadow:0 2px 8px rgba(0,0,0,0.04);}
+.s6-card{background:var(--card); border:1px solid var(--card-line); border-radius:10px; padding:12px 14px; display:flex; align-items:center; gap:10px; transition:transform .2s, box-shadow .2s; box-shadow:0 2px 8px rgba(0,0,0,0.04); width:90%; margin-inline:auto;}
 .s6-card:hover{transform:scale(1.03); box-shadow:0 8px 24px rgba(106,76,240,0.15);}
 .s6-card .mnum{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:15px; color:var(--ink-4); min-width:24px;}
 .s6-card img{width:44px; height:44px; display:block; flex-shrink:0;}
@@ -344,7 +344,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
     <div class="gap-layout">
       <div>
         <img src="legacy-systems.png" alt="各自獨立運作的監控系統" data-zoom-big="1" style="width:100%; height:auto;">
-        <div class="scope-note">中工交付中央監控系統、告警、資料收集及功能操作為主。</div>
+        <div class="scope-note">中工交付監控系統、告警、資料收集及功能操作為主。</div>
       </div>
       <div class="gap-divider"><span>≠</span></div>
       <div>
@@ -377,7 +377,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
         <img src="central-command-illustration.jpg" alt="中央戰情室：整合既有系統，即時掌握設備、告警與運維數據" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:14px;">
       </div>
     </div>
-    <div class="value-line"><div>集中看見</div><div>即時發現</div><div>立即處理</div><div>累積決策資料</div></div>
+    <div class="value-line"><div>集中看見</div><div>即時發現</div><div>立即處理</div><div>決策資料推疊</div></div>
     <div class="exec-bottomline">從「只能知道設備異常」，提升為「即時發現、立即處理、持續追蹤、形成決策資料」。</div>
   </div>
 </section>
@@ -405,7 +405,7 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
         </div>
       </div>
     </div>
-    <div class="decision-ask">成立跨部門專案小組，分階段推動自主整合，建構臺北農產中央戰情管理平台。</div>
+    <div class="decision-ask">成立跨部門專案小組，分階段推動自主整合，建構臺北農產智慧巡檢暨中央戰情室平台。</div>
   </div>
 </section>
 
@@ -457,11 +457,11 @@ table.compare-table td.k{font-size:14px; color:var(--ink);}
 <section class="slide" id="s4" data-section="維持注意" data-slide="5" style="background:url('bg-tech.png') center/cover no-repeat, var(--bg); background-blend-mode:overlay;">
   <div class="slide-inner" style="background:rgba(236,236,234,0.88); border-radius:16px; padding:30px 34px;">
     <div class="kicker">HOW · 技術架構</div>
-    <h2 class="h">零授權費開源技術堆疊，避免廠商鎖定</h2>
+    <h2 class="h">零授權費開源技術堆疊，避免廠商綁架</h2>
     <div style="display:flex; align-items:center; justify-content:center; margin:10px 0;">
       <img src="P5.png" alt="" style="width:75%; height:auto; border-radius:12px; box-shadow:0 2px 20px rgba(24,24,27,0.10);">
     </div>
-    <p class="lede" style="margin-top:24px; font-size:18px; max-width:none; white-space:nowrap;">戰略優勢在於「避免供應商鎖定」——自研系統使開發團隊掌握原始碼主導權，能完全貼合臺北農產公司 SOP。</p>
+    <p class="lede" style="margin-top:24px; font-size:18px; max-width:none; white-space:nowrap;">戰略優勢在於「避免供應商綁架」——自研系統使開發團隊掌握原始碼主導權，能完全貼合臺北農產公司 SOP。</p>
   </div>
 </section>
 
